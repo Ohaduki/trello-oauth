@@ -22,8 +22,10 @@ class OauthController {
             }
             else {
                 res.cookie('trello_token', accessToken)
-                next()
+                res.redirect(`${process.env.CLIENT_URL}`)
             }
         })
     }
 }
+
+module.exports = OauthController

@@ -7,7 +7,7 @@ const oauth = new OAuth.OAuth(
     consumerKey = process.env.TRELLO_KEY,
     consumerSecret = process.env.TRELLO_OAUTH_SECRET,
     version = '1.0A',
-    authorise_callback = 'CALLBACK ROUTE!',
+    authorise_callback = `${process.env.SERVER_URL}/callback`,
     signatureMethod = 'HMAC-SHA1'
 )
 
