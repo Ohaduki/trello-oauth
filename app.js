@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-
+const userCheck = require('./lib/userCheck');
 const app = express();
 
 const corsOptions = {
@@ -20,5 +20,7 @@ app.use((req, res, next) => {
     }
     next();
 })
+
+app.use(userCheck);
 
 module.exports = app;
