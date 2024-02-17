@@ -1,3 +1,0 @@
-tokens = {}
-
-module.exports = tokens
